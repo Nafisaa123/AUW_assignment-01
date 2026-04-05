@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int pin, i;
+
+    for (i = 0; i < 3; i++) {
+        printf("Enter PIN: ");
+        scanf("%d", &pin);
+
+        if (pin == 5555) {
+            printf("Access Granted");
+            break;
+        }
+    }
+
+    if (i == 3)
+        printf("Account Locked");
+
+    return 0;
+}
