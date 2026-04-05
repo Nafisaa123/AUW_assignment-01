@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int status, booked = 0, empty = 0;
+
+    for (int i = 1; i <= 40; i++) {
+        printf("Enter 1 (booked) or 0 (empty): ");
+        scanf("%d", &status);
+
+        if (status == 1)
+            booked++;
+        else
+            empty++;
+
+        if (booked == 40)
+            break;
+    }
+
+    printf("Total booked: %d\n", booked);
+    printf("Total empty: %d", empty);
+
+    return 0;
+}
