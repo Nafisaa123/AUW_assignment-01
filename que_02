@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int total, attended;
+    float attendance;
+
+    printf("Enter total classes: ");
+    scanf("%d", &total);
+
+    printf("Enter attended classes: ");
+    scanf("%d", &attended);
+
+    attendance = (attended * 100.0) / total;
+
+    if (attendance >= 75)
+        printf("Allowed to sit in exam");
+    else {
+        printf("Not allowed\n");
+        int required = (0.75 * total) - attended;
+        printf("More classes needed: %d", required);
+    }
+
+    return 0;
+}
