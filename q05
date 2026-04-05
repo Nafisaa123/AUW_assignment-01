@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int user, password;
+
+    printf("Enter user type (1=admin, 2=teacher, 3=student): ");
+    scanf("%d", &user);
+
+    printf("Enter password: ");
+    scanf("%d", &password);
+
+    if (user == 1) {
+        if (password == 1234)
+            printf("Welcome Admin Panel");
+        else
+            printf("Invalid password");
+    }
+    else if (user == 2) {
+        if (password == 2222)
+            printf("Welcome Teacher Panel");
+        else
+            printf("Invalid password");
+    }
+    else if (user == 3) {
+        if (password == 3333)
+            printf("Welcome Student Panel");
+        else
+            printf("Invalid password");
+    }
+
+    return 0;
+}
